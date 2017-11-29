@@ -32,16 +32,10 @@ def face_match(filePath):
     result = client.match([get_file_content('father.jpg'),get_file_content(filePath)])
     return result
 
-def get_img():
+def get_img(filePath = 'father.jpg'):
     cam = Device()
-    cam.saveSnapshot('father.jpg')
-
-if __name__ == '__main__':
-    #print face_detect('face.jpg')
-    cam = Device()
-    filePath = 'last.jpg';
     cam.saveSnapshot(filePath)
-    result = face_match(filePath)
-    print result['result'][0]['score']
-    if result['result'][0]['score'] >= 80:
-        print 1;
+
+
+
+
